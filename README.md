@@ -47,4 +47,4 @@ server.HandlesStaticFile("/style.css", "../assets/style.css");
 
 # Why another HTTP server?
 I was surprised when I could not find a valid HTTP server to use when writing tests.
-Every project had some random problem. Some were targeting a small range of frameworks, such as .NET Framework. One of them could not handle simultaneous connections! The other one didn't support handling requests asynchronously. Then I figured this is a simple task to do, so I'm going to do it properly myself.
+Every package I found was suffering from some random problem. Some were targeting a small range of frameworks, such as .NET Framework. One of them could not handle simultaneous connections! The other one didn't support handling requests asynchronously. Then I figured this is a simple task to do, so I'm going to do it properly myself.
