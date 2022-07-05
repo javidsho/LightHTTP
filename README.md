@@ -22,6 +22,12 @@ Every project had some random problem. Some were targeting a small range of fram
 ## Installation (via <a href="https://www.nuget.org/packages/LightHTTP/">NuGet</a>)
 
     Install-Package LightHTTP -Version 1.0
+    
+## Step-by-step
+- Create a new instance of `LightHttpServer`.
+- Set up prefixes to listen to. You can access the `HttpListener` instance via the `LightHttpServer.Listener` property.
+- Register your handlers. Handlers can be registered by any of the `Handles*` extension methods on the `LightHttpServer` instance.
+- Notice that handles are executed with the same order as registered. The first handler that accepts the path will be executed.
 
 ## Example
 
@@ -29,7 +35,8 @@ Every project had some random problem. Some were targeting a small range of fram
 using var server = new LightHttpServer();
 
 // let's find an available port on the local machine, which is useful for unit tests
-var testUrl = _server.AddAvailableLocalPrefix();
+var testUrl = server.AddAvailableLocalPrefix();
+server.Start();
 
 server.HandlesPath("/health", context => context.Response.StatusCode = 200);
 server.HandlesPath("/hello", async (context, cancellationToken) => {
