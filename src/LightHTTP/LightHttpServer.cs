@@ -1,4 +1,5 @@
 ﻿using LightHTTP.Handling;
+using LightHTTP.Internal;
 using System;
 using System.Net;
 using System.Threading;
@@ -44,6 +45,21 @@ namespace LightHTTP
         /// Gets the <see cref="HttpListener"/> instance.
         /// </summary>
         public HttpListener Listener { get; }
+
+        /// <summary>
+        /// Adds an automatically generated prefix to the HTTP listener.
+        /// This method is useful for testing scenarios.
+        /// </summary>
+        /// <returns>
+        /// The prefix in the following format: 'http://host:port/'
+        /// </returns>
+        public string AddAvailableLocalPrefix()
+        {
+            var port = TcpHelpers.GetOpenPort();
+            var prefix = $"http://localhost:{port}/";
+            Listener.Prefixes.Add(prefix);
+            return prefix;
+        }
 
         public void Handles(ILightHttpHandler handler)
         {

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace LightHTTP.Tests
 {
-    public sealed class HttpHeadersTests : IDisposable
+    public sealed class HttpServerTests : IDisposable
     {
-        private const string TestUrl = "http://localhost:9999/";
+        private readonly string TestUrl;
         private readonly LightHttpServer _server;
         private readonly HttpClient _client;
 
-        public HttpHeadersTests()
+        public HttpServerTests()
         {
             _server = new LightHttpServer();
-            _server.Listener.Prefixes.Add(TestUrl);
+            TestUrl = _server.AddAvailableLocalPrefix();
             _server.Start();
             _client = new HttpClient
             {
@@ -37,6 +37,13 @@ namespace LightHTTP.Tests
             _server.HandlesPath("/code", context => context.Response.StatusCode = statusCode);
             using var response = await _client.GetAsync("/code");
             Assert.Equal((HttpStatusCode)statusCode, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task RegisterNoHandler_ExpectFallbackHandler()
+        {
+            using var response = await _client.GetAsync("/test");
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
     }
 }
