@@ -1,6 +1,6 @@
 # LightHTTP
-[![GitHub](https://img.shields.io/github/license/javidsho/LightHTTP)](https://github.com/javidsho/LightHTTP/blob/main/LICENSE)
 [![NuGet download count](https://img.shields.io/nuget/dt/LightHTTP)](https://www.nuget.org/packages/LightHTTP)
+[![GitHub](https://img.shields.io/github/license/javidsho/LightHTTP)](https://github.com/javidsho/LightHTTP/blob/main/LICENSE)
 [![Test](https://github.com/javidsho/LightHTTP/actions/workflows/test.yml/badge.svg)](https://github.com/javidsho/LightHTTP/actions/workflows/test.yml)
 
 ## Overview
