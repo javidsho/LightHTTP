@@ -25,7 +25,10 @@ Every project had some random problem. Some were targeting a small range of fram
 
 ```csharp
 using var server = new LightHttpServer();
-var testUrl = _server.AddAvailableLocalPrefix(); // find an available port itself, which is useful for unit tests
+
+// let's find an available port on the local machine, which is useful for unit tests
+var testUrl = _server.AddAvailableLocalPrefix();
+
 server.HandlesPath("/health", context => context.Response.StatusCode = 200);
 server.HandlesPath("/hello", async (context, cancellationToken) => {
 	var bytes = Encoding.UTF8.GetBytes("Hello World");
