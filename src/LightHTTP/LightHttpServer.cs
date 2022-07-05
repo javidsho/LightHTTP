@@ -115,6 +115,7 @@ namespace LightHTTP
             }
             catch (Exception exception)
             {
+                context.Response.StatusCode = 500;
                 if (UnhandledExceptionThrown == null)
                     throw;
                 UnhandledExceptionThrown?.Invoke(context, exception);
