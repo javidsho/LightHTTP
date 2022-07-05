@@ -1,4 +1,5 @@
 # LightHTTP
+[![NuGet download count](https://img.shields.io/nuget/dt/LightHTTP)](https://www.nuget.org/packages/LightHTTP)
 [![Test](https://github.com/javidsho/LightHTTP/actions/workflows/test.yml/badge.svg)](https://github.com/javidsho/LightHTTP/actions/workflows/test.yml)
 
 ## Overview
