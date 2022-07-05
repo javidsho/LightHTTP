@@ -24,11 +24,13 @@ namespace LightHTTP.Handling.Handlers
 
         private NotFoundHandler() { }
 
+        /// <inheritdoc />
         public bool AcceptsPath(string path)
         {
             return true;
         }
 
+        /// <inheritdoc />
         public Task HandleAsync(HttpListenerContext context, CancellationToken cancellationToken)
         {
             context.Response.StatusCode = 404;

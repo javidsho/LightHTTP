@@ -17,7 +17,7 @@ LightHTTP is a lightweight HTTP server for .NET which can be used in the followi
 
 ## Installation (via <a href="https://www.nuget.org/packages/LightHTTP/">NuGet</a>)
 
-    Install-Package LightHTTP -Version 1.0
+    Install-Package LightHTTP -Version 1.0.1
     
 ## Step-by-step
 - Create a new instance of `LightHttpServer`.

@@ -16,12 +16,18 @@ namespace LightHTTP
         private readonly LightHttpHandlerManager _handlerManager = new();
         private CancellationTokenSource? _cancellationTokenSource;
 
+        /// <summary>
+        /// Creates a new HTTP server wrapping <paramref name="listener"/>.
+        /// </summary>
         public LightHttpServer(HttpListener listener, bool ownsListener = true)
         {
             Listener = listener;
             _ownsListener = ownsListener;
         }
 
+        /// <summary>
+        /// Creates a new HTTP server.
+        /// </summary>
         public LightHttpServer() : this(new HttpListener())
         {
         }
@@ -61,6 +67,7 @@ namespace LightHTTP
             return prefix;
         }
 
+        /// <inheritdoc />
         public void Handles(ILightHttpHandler handler)
         {
             _handlerManager.Handles(handler);
@@ -90,6 +97,7 @@ namespace LightHTTP
             Listener.Stop();
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             Stop();
