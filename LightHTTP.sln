@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32611.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52C7165A-3B8D-44DA-92EA-322FD0F1EE0B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightHTTP", "src\LightHTTP\LightHTTP.csproj", "{E95F866B-9EE9-470E-A48A-3F65A8B3B399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightHTTP.Tests", "tests\LightHTTP.Tests\LightHTTP.Tests.csproj", "{6DC0379B-9F94-427A-82A3-DCD1557E0244}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E95F866B-9EE9-470E-A48A-3F65A8B3B399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95F866B-9EE9-470E-A48A-3F65A8B3B399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95F866B-9EE9-470E-A48A-3F65A8B3B399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95F866B-9EE9-470E-A48A-3F65A8B3B399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC0379B-9F94-427A-82A3-DCD1557E0244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC0379B-9F94-427A-82A3-DCD1557E0244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC0379B-9F94-427A-82A3-DCD1557E0244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC0379B-9F94-427A-82A3-DCD1557E0244}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {696EA32E-4E2D-4800-A5DB-C2BE8F186993}
+	EndGlobalSection
+EndGlobal
