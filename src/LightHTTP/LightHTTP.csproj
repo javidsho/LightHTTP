@@ -7,8 +7,10 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<Authors>Javid Shoaei</Authors>
 		<Copyright>Copyright (C) 2022 Javid Shoaei</Copyright>
+		<Description>Lightweight HTTP server for mocking, testing, and other generic purposes</Description>
 		<PackageProjectUrl>https://github.com/javidsho/LightHTTP</PackageProjectUrl>
-		<PackageVersion>1.0.1</PackageVersion>
+		<PackageTags>http,server,http-server,mock,lightweight,httplistener</PackageTags>
+		<PackageVersion>1.0.2</PackageVersion>
 	</PropertyGroup>
 
 </Project>
