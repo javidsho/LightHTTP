@@ -1,6 +1,7 @@
 ﻿using LightHTTP.Handling;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -114,6 +115,22 @@ namespace LightHTTP
         {
             var regex = new Regex(pathRegexPattern, RegexOptions.Compiled);
             registry.HandlesRegex(regex, handle);
+        }
+
+        /// <summary>
+        /// Defines a handler for the exact path.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void HandlesStaticFile(this ILightHttpHandlerRegistry registry, string path, string fileName, int bufferSize = 0)
+        {
+            if (bufferSize <= 0)
+                bufferSize = 81920;
+
+            registry.HandlesPath(path, async (context, cancellationToken) =>
+            {
+                using var fileStream = new FileStream(fileName, FileMode.Open);
+                await fileStream.CopyToAsync(context.Response.OutputStream, bufferSize, cancellationToken).ConfigureAwait(false);
+            });
         }
     }
 }
