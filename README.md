@@ -31,6 +31,8 @@ var testUrl = _server.AddAvailableLocalPrefix();
 
 server.HandlesPath("/health", context => context.Response.StatusCode = 200);
 server.HandlesPath("/hello", async (context, cancellationToken) => {
+	context.Response.ContentEncoding = Encoding.UTF8;
+	context.Response.ContentType = "text/plain";
 	var bytes = Encoding.UTF8.GetBytes("Hello World");
 	await context.Response.OutputStream.WriteAsync(bytes, 0, bytes.Length);
 });
