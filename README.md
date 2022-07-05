@@ -27,7 +27,7 @@ Every project had some random problem. Some were targeting a small range of fram
 - Create a new instance of `LightHttpServer`.
 - Set up prefixes to listen to. You can access the `HttpListener` instance via the `LightHttpServer.Listener` property.
 - Register your handlers. Handlers can be registered by any of the `Handles*` extension methods on the `LightHttpServer` instance.
-- Notice that handles are executed with the same order as registered. The first handler that accepts the path will be executed.
+- Notice that handlers are executed with the same order as registered. The first handler that accepts the path will be executed.
 
 ## Example
 
