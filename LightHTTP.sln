@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightHTTP", "src\LightHTTP\LightHTTP.csproj", "{E95F866B-9EE9-470E-A48A-3F65A8B3B399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightHTTP", "src\LightHTTP\LightHTTP.csproj", "{E95F866B-9EE9-470E-A48A-3F65A8B3B399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightHTTP.Tests", "tests\LightHTTP.Tests\LightHTTP.Tests.csproj", "{6DC0379B-9F94-427A-82A3-DCD1557E0244}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightHTTP.Tests", "tests\LightHTTP.Tests\LightHTTP.Tests.csproj", "{6DC0379B-9F94-427A-82A3-DCD1557E0244}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
