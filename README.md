@@ -1,4 +1,6 @@
 # LightHTTP
+[![GitHub](https://img.shields.io/github/license/javidsho/LightHTTP)](https://github.com/javidsho/LightHTTP/blob/master/LICENSE)
+[![NuGet download count](https://img.shields.io/nuget/dt/LightHTTP)](https://www.nuget.org/packages/LightHTTP)
 
 ## Overview
 LightHTTP is a lightweight HTTP server for .NET which can be used in the following scenarios:
