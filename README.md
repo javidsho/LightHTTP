@@ -29,7 +29,7 @@ LightHTTP is a lightweight HTTP server for .NET which can be used in the followi
 ## Example
 
 ```csharp
-using var server = new LightHttpServer();
+var server = new LightHttpServer();
 
 // let's find an available port on the local machine, which is useful for unit tests
 var testUrl = server.AddAvailableLocalPrefix();
@@ -46,6 +46,8 @@ server.HandlesStaticFile("/style.css", "../assets/style.css");
 
 // finally start serving
 server.Start();
+
+// and call server.Dispose() when done
 ```
 
 # Why another HTTP server?
