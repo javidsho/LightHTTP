@@ -33,8 +33,8 @@ using var server = new LightHttpServer();
 
 // let's find an available port on the local machine, which is useful for unit tests
 var testUrl = server.AddAvailableLocalPrefix();
-server.Start();
 
+// register our routes and handlers
 server.HandlesPath("/health", context => context.Response.StatusCode = 200);
 server.HandlesPath("/hello", async (context, cancellationToken) => {
 	context.Response.ContentEncoding = Encoding.UTF8;
@@ -43,6 +43,9 @@ server.HandlesPath("/hello", async (context, cancellationToken) => {
 	await context.Response.OutputStream.WriteAsync(bytes, 0, bytes.Length);
 });
 server.HandlesStaticFile("/style.css", "../assets/style.css");
+
+// finally start serving
+server.Start();
 ```
 
 # Why another HTTP server?
